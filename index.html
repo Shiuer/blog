@@ -5,14 +5,14 @@ title: kalends'blog
 <!-- <h2>{{ page.title }}</h2> -->
 <ul>
     {% for post in site.posts %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date_to_string }} </a></li>
+    <li><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.date | date_to_string }} </a></li>
     {% endfor %}
 </ul>
 <div class="container">
 		<div class="row">
 		  <div id="main" class="col-md-8 col-sm-offset-1">
 				<div class="article">
-					<div class="title"><a href="" target="_blank">sublime text3 mac package control</a></div>
+					<div class="title"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">sublime text3 mac package control</a></div>
 					<div class="summary">
 						<p>Ctrl+` 打开控制台，然后贴下面的代码回车</p>
 						<p>import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())</p>
@@ -20,7 +20,7 @@ title: kalends'blog
 				</div>
 
 				<div class="article">
-					<div class="title"><a href="" target="_blank">解决Chrome谷歌浏览器不支持CSS设置小于12px的文字</a></div>
+					<div class="title"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">解决Chrome谷歌浏览器不支持CSS设置小于12px的文字</a></div>
 					<div class="summary"><p>原来直接加个chrome私有属性就能解决的问题不知道从哪版chrome升级后不行了</p>
 
 						<p>webkit的私有属性：</p>
