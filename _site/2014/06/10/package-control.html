@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>sublime text3 mac package control</title>
+	<link rel="stylesheet" href="../../../css/base.css"></head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div id="main" class="col-md-8 col-sm-offset-1">
+				<div class="artical"><h2 class="title content-title">sublime text3 mac package control</h2>
+<p>10 Jun 2014</p>
+<div class="content">
+	<p>
+		<span style="font-size: 14px; font-family: Tahoma,'Microsoft Yahei',Simsun; color: #444444; background-color: #ffffff; line-height: 21px;">Ctrl+` 打开控制台，然后贴下面的代码回车</span>
+		<br>
+		<span style="font-size: 14px; font-family: Tahoma,'Microsoft Yahei',Simsun; color: #444444; background-color: #ffffff; line-height: 21px;">
+			import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+		</span>
+	</p>
+</div>
+</div>
+			</div>
+
+			<div id="aside" class="col-md-3">
+				<div class="avatar">
+					<img src="../../../images/flower.png" alt="" class="img-circle"></div>
+
+				<section class="author-info">
+					<h1>
+						<a class="name" href="javascript:;">十五</a>
+					</h1>
+					<p class="summary">知之为知之，不知为不知</p>
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
