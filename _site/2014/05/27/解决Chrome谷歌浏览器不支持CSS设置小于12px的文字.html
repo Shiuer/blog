@@ -3,82 +3,72 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>解决Chrome谷歌浏览器不支持CSS设置小于12px的文字</title>
-	<link rel="stylesheet" href="../../../css/base.css"></head>
+	<link rel="stylesheet" href="/blog/css/base.css"></head>
 <body>
 
 	<div class="container">
 		<div class="row">
 			<div id="main" class="col-md-8 col-sm-offset-1">
-				<div class="artical"><h2 class="title content-title">解决Chrome谷歌浏览器不支持CSS设置小于12px的文字</h2>
-<p>27 May 2014</p>
-<div class="content">
-	<p>
-		<span>原来直接加个chrome私有属性就能解决的问题不知道从哪版chrome升级后不行了</span>
-	</p>
-	<p>webkit的私有属性：</p>
-	<p>html{-webkit-text-size-adjust:none;}</p>
-	<p>
-		<span></span>
-		所以只能找别的解决办法 看别人的解决方案是利用CSS3的 <strong><span style="margin: 0px; font-family: Arial,宋体,微软雅黑; color: #c00000;">
-				transform属性
-				<span style="font-size: 14px; font-family: Arial,宋体,微软雅黑; background-color: #ffffff; line-height: 21px;">transform:scale()</span>
-			</span></strong> 
-	</p>
-	<p>
-		<span>
-			-webkit-transform:scale();必须用在块级元素 否则不起效果 而且缩放只能是缩放文字 占的位置仍然是原来字号大小的位置 所以要给margin负边距&nbsp;margin:-5px -10px; 然 新版的
-			<span style="font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #ffffff; line-height: 21px;">
-				opera
-				<span style="font-size: 14px; font-family: 'Microsoft YaHei',Tahoma,sans-serif; color: #333333; background-color: #ffffff; line-height: 21px;">也用</span>
-				<span style="margin: 0px; font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #fafafa; line-height: 21px;">
-					webkit内核 所以要给它缩回去 只有加私有属性了
-					<span>
-						<span>-o-transform</span>
-					</span>
+				<div class="artical">
+					<h2 class="title content-title">解决Chrome谷歌浏览器不支持CSS设置小于12px的文字</h2><p class="datetime">27 May 2014</p>
+					<div class="content"> <p>原来直接加个chrome私有属性就能解决的问题不知道从哪版chrome升级后不行了</p>
+<p>webkit的私有属性：</p>
+<p>html{-webkit-text-size-adjust:none;}</p>
+<p>
+	所以只能找别的解决办法 看别人的解决方案是利用CSS3的 <strong><span style="margin: 0px; font-family: Arial,宋体,微软雅黑; color: #c00000;">
+			transform属性
+			<span style="font-size: 14px; font-family: Arial,宋体,微软雅黑; background-color: #ffffff; line-height: 21px;">transform:scale()</span>
+		</span></strong> 
+</p>
+<p>
+	-webkit-transform:scale();必须用在块级元素 否则不起效果 而且缩放只能是缩放文字 占的位置仍然是原来字号大小的位置 所以要给margin负边距&nbsp;margin:-5px -10px; 然 新版的
+	<span style="font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #ffffff; line-height: 21px;">
+		opera
+		<span style="font-size: 14px; font-family: 'Microsoft YaHei',Tahoma,sans-serif; color: #333333; background-color: #ffffff; line-height: 21px;">也用</span>
+		<span style="margin: 0px; font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #fafafa; line-height: 21px;">
+			webkit内核 所以要给它缩回去 只有加私有属性了
+			<span>
+				<span>-o-transform</span>
+			</span>
+		</span>
+	</span>
+</p>
+<p>
+	<span style="font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #ffffff; line-height: 21px;">
+		<span style="margin: 0px; font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #fafafa; line-height: 21px;">
+			<span>
+				<span>综上得出</span>
+			</span>
+		</span>
+	</span>
+</p>
+<p>
+	<span style="font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #ffffff; line-height: 21px;">
+		<span style="margin: 0px; font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #fafafa; line-height: 21px;">
+			<span>
+				<span>
+					{-webkit-transform:scale(0.94);-o-transform:scale(1);margin:15px -10px 0 -20px;display:block;}
 				</span>
 			</span>
 		</span>
-	</p>
-	<p>
-		<span>
-			<span style="font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #ffffff; line-height: 21px;">
-				<span style="margin: 0px; font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #fafafa; line-height: 21px;">
-					<span>
-						<span>综上得出</span>
-					</span>
-				</span>
-			</span>
-		</span>
-	</p>
-	<p>
-		<span>
-			<span style="font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #ffffff; line-height: 21px;">
-				<span style="margin: 0px; font-size: 14px; font-family: Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; color: #333333; background-color: #fafafa; line-height: 21px;">
-					<span>
-						<span>
-							{-webkit-transform:scale(0.94);-o-transform:scale(1);margin:15px -10px 0 -20px;display:block;}
-						</span>
-					</span>
-				</span>
-			</span>
-		</span>
-	</p>
+	</span>
+</p>
 </div>
-</div>
+				</div>
 			</div>
 
+			<!-- aside -->
 			<div id="aside" class="col-md-3">
-				<div class="avatar">
-					<img src="../../../images/flower.png" alt="" class="img-circle"></div>
+	<div class="avatar">
+		<img src="/blog/images/flower.png" alt="" class="img-circle">
+	</div>
+	
+	<section class="author-info">
+		<h1><a class="name" href="javascript:;">十五</a></h1>
+		<p class="summary">知之为知之，不知为不知</p>
+	</section>
 
-				<section class="author-info">
-					<h1>
-						<a class="name" href="javascript:;">十五</a>
-					</h1>
-					<p class="summary">知之为知之，不知为不知</p>
-				</section>
-
-			</div>
+</div>
 		</div>
 
 	</div>

@@ -3,9 +3,20 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title>{{ page.title }}</title>
-        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/base.css">
     </head>
     <body>
-        {{ content }}
+        <div class="container">
+		<div class="row">
+			<div id="main" class="col-md-8 col-sm-offset-1">
+				{{ content }}
+			</div>
+
+			<!-- aside -->
+			{% include aside.html %}
+		</div>
+
+	</div>
+
     </body>
 </html>

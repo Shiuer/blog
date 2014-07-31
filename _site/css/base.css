@@ -6701,7 +6701,7 @@ button.close {
 
 #main {
   background: #f6f5f2;
-  min-height: 800px;
+  min-height: 1000px;
 }
 
 #main, #aside {
@@ -6738,22 +6738,25 @@ button.close {
   border-bottom: 1px solid #e2e2e2;
 }
 .bloglist .title a {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 28px;
   display: inline-block;
-  color: #454545;
+  color: #333;
 }
 .bloglist .summary {
-  padding: 15px 60px;
+  padding: 20px 60px 10px;
   font-size: 14px;
   line-height: 24px;
   border-bottom: 1px solid #e2e2e2;
 }
-.bloglist .datetime {
+.bloglist .toolbar {
   text-align: right;
   color: #999;
   padding: 10px 60px 30px;
   border-bottom: 1px solid #dddcdb;
+}
+.bloglist .toolbar .time {
+  margin-left: 10px;
 }
 
 .artical {
@@ -6764,8 +6767,10 @@ button.close {
   font-size: 26px;
 }
 .artical .content {
-  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
   font-size: 16px;
+  border-radius: 3px;
 }
 
 .backtotop {
