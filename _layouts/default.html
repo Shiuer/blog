@@ -6,17 +6,17 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/css/base.css">
     </head>
     <body>
-        <div class="container">
-		<div class="row">
-			<div id="main" class="col-md-8 col-sm-offset-1">
-				{{ content }}
+        <div class="container" style="display:none">
+			<div class="row">
+				<div id="main" class="col-md-8 col-sm-offset-1">
+					{{ content }}
+				</div>
+
+				<!-- aside -->
+				{% include aside.html %}
 			</div>
 
-			<!-- aside -->
-			{% include aside.html %}
 		</div>
-
-	</div>
 
     </body>
 </html>
