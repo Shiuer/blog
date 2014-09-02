@@ -4,14 +4,14 @@ title: kalends'blog
 ---
 
 {% for post in paginator.posts %}
-<!-- <div class="bloglist">
+<div class="bloglist" style="display:none">
 	<div class="title"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a> </div>
 		<div class="summary">
 			<!-- {{ post.summary }} -->
 			{{ post.excerpt }}
 		</div>
 		<div class="toolbar"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">阅读全文</a> <time class="time">{{ post.date | date_to_string }}</time></div>
-</div> -->
+</div>
 {% endfor %}
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
